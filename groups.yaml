@@ -1,0 +1,126 @@
+test:
+  name: "Sensorer"
+  view: yes
+  entities: 
+    - group.weather
+    - group.sensors
+
+switches:
+  name: "Lampor"
+  view: yes
+  entities:
+    - group.outside_switches
+    - group.living_room_switches
+    - group.upper_hall_switches
+    - group.garage_switches
+    - group.kitchen_switches
+    - group.pannrummet_switches
+    - group.mormors_switches
+
+automations:
+  name: "Automationer"
+  view: yes
+  entities:
+    - group.automations_timers
+
+automations_timers:
+  name: "Timers"
+  entities:
+    - automation.tanda_vid_solnedgang
+    - automation.slacka_pa_natten
+
+garage_switches:
+  name: Garaget
+  entities: 
+    - switch.bryggarhuset_lysror_switch
+
+outside_switches:
+  name: Utomhus
+  view: no
+  entities: 
+    - switch.entrebrytare_switch
+    - switch.utomhusswitch_1
+    - switch.utomhusswitch_2
+    - switch.pannrummet_switch_3
+
+pannrummet_switches:
+  name: Pannrummet
+  entities: 
+    - switch.pannrummet_switch
+    - switch.pannrummet_switch_3
+
+upper_hall_switches:
+  name: Hallen, uppe
+  view: no
+  entities:
+    - switch.golvlampa_hall_uppe_switch
+    - switch.aeotec_bordslampa_switch
+
+living_room_switches:
+  name: Vardagsstuga
+  view: no
+  entities:
+    - light.lampa_vardagsstuga_matbord_level
+    - switch.vardagsrum_fonster_switch
+    - switch.vardagsrum_jordglob_switch
+
+jonas_room_switches:
+  name: Jonas rum
+  view: no
+  entities:
+    - switch.nattduksbordslampa_jonas_rum_switch
+
+kitchen_switches:
+  name: Köket
+  view: no
+  entities:
+    - switch.dubbelbrytare_koket_switch
+    - switch.dubbelbrytare_koket_switch_3
+
+mormors_switches:
+  name: Mormors rum
+  view: no
+  entities:
+    - switch.hoger_lampa_mormors_rum_switch
+
+
+
+
+
+
+
+weather:
+  name: Väder
+  entities:
+    - sensor.utomhus_temperature
+    - sensor.vaxis_temperature
+    - sensor.vaxis_humidity
+    - sensor.fibaro_eye_hallen_uppe_temperature
+    - sensor.fibaro_eye_hallen_uppe_luminance
+    - sensor.sunis
+    - sensor.solar_angle
+    - sensor.yr_symbol
+
+sensors:
+  name: Sensorer
+  entities:
+    - sensor.aeotec_bordslampa_power
+    - sensor.badrumssensor_relative_humidity
+    - sensor.badrumssensor_temperature
+    - sensor.dubbelbrytare_koket_power
+    - sensor.dubbelbrytare_koket_power_3
+    - sensor.dubbelbrytare_koket_switch
+    - sensor.entrebrytare_power
+    - sensor.fibaro_eye_hallen_uppe_burglar
+    - sensor.fibaro_eye_hallen_uppe_luminance
+    - sensor.fibaro_eye_hallen_uppe_temperature
+    - sensor.fibaro_system_fgrgbwm441_rgbw_controller_power_2
+    - sensor.golvlampa_hall_uppe_power
+    - sensor.jonas_rum_temperature
+    - sensor.kok_temperature
+    - sensor.motion_garage
+    - sensor.solar_angle
+    - sensor.sunis
+    - sensor.utomhus_temperature
+    - sensor.vaxis_humidity
+    - sensor.vaxis_temperature
