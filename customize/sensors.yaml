@@ -39,6 +39,17 @@ automation.sunset_turn_on_outside:
 automation.night_turn_off_outside:
   friendly_name: "Släck utebelysning vid 23:00"
 
+
+sensor.bryggarhuset_lysror_power:
+  friendly_name: "Effekt lysrör bryggarhuset"
+sensor.lampa_vardagsstuga_matbord_power_2:
+  friendly_name: "Effekt matbordslampa vardagsstuga"
+sensor.pannrummet_power:
+  friendly_name: "Effekt taklampa pannrummet"
+sensor.pannrummet_power_3:
+  friendly_name: "Effekt pannrummet dörrlampa utomhus"
+
+
 sensor.utomhus_temperature:
   friendly_name: Temperatur utomhus
   icon: mdi:thermometer

@@ -233,6 +233,16 @@ sensor.lampa_vardagsstuga_matbord_system:
 sensor.pannrummet_alarm_type:
   hidden: true
 
+
+sensor.bryggarhuset_lysror_power_2:
+  hidden: true
+sensor.bryggarhuset_lysror_power_3: #TODO
+  hidden: true
+sensor.entrebrytare_power_2:
+  hidden: true
+sensor.entrebrytare_power_3:
+  hidden: true
+
 sensor.rorelse_vardagsstuga_luminance:
   hidden: true
 sensor.rorelse_pannrummet_luminance:

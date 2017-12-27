@@ -8,10 +8,10 @@ status_netatmo:
   view: no
   name: "Netatmo"
   entities:
-    - sensor.netatmo_outside_battery
-    - sensor.netatmo_outside_radio
-    - sensor.netatmo_indoor_wifi
     - sensor.netatmo_rain_battery
-    - sensor.netatmo_rain_radio
+    - sensor.netatmo_outside_battery
     - sensor.netatmo_wind_battery
+    - sensor.netatmo_rain_radio
+    - sensor.netatmo_outside_radio
     - sensor.netatmo_wind_radio 
+    - sensor.netatmo_indoor_wifi
