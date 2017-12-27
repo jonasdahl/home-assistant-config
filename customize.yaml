@@ -1,0 +1,142 @@
+switch.pannrummet_switch:
+  friendly_name: Taklampa Pannrummet
+switch.pannrummet_switch_3:
+  friendly_name: Utomhusbelysning Pannrummet
+
+switch.utomhusswitch_1:
+  friendly_name: Utomhusbelysning
+switch.utomhusswitch_2:
+  hidden: true
+  friendly_name: Utomhusswitch 2
+
+switch.dubbelbrytare_koket_switch:
+  friendly_name: Taklampa Köket
+  icon: mdi:lightbulb
+switch.dubbelbrytare_koket_switch_2:
+  hidden: true
+switch.dubbelbrytare_koket_switch_3:
+  friendly_name: Matbordslampa Köket
+  icon: mdi:lightbulb
+light.lampa_vardagsstuga_matbord_level:
+  friendly_name: "Matbordslampa"
+switch.bryggarhuset_lysror_switch:
+  friendly_name: Lysrör Bryggarhuset och utanför
+
+sensor.lampa_vardagsstuga_matbord_power:
+  friendly_name: "Matbordslampa, effekt"
+
+sensor.dubbelbrytare_koket_power:
+  friendly_name: Taklampa köket, effekt
+sensor.dubbelbrytare_koket_power_3:
+  friendly_name: Matbordslampa köket, effekt
+sensor.fibaro_system_fgrgbwm441_rgbw_controller_power:
+  hidden: true
+sensor.fibaro_system_fgrgbwm441_rgbw_controller_power_2:
+  friendly_name: Vattenutkastare, effekt
+
+device_tracker.jonas_jonastele:
+  friendly_name: Jonas
+
+device_tracker.homeassistant_jonastele:
+  hidden: true
+sensor.dubbelbrytare_koket_power_2:
+  hidden: true
+sensor.dubbelbrytare_koket_power_management:
+  hidden: true
+sensor.dubbelbrytare_koket_sourcenodeid:
+  hidden: true
+sensor.dubbelbrytare_koket_heat:
+  hidden: true
+sensor.dubbelbrytare_koket_exporting:
+  hidden: true
+sensor.dubbelbrytare_koket_exporting_2:
+  hidden: true
+sensor.dubbelbrytare_koket_exporting_3:
+  hidden: true
+sensor.dubbelbrytare_koket_energy:
+  hidden: true
+sensor.dubbelbrytare_koket_energy_2:
+  hidden: true
+sensor.dubbelbrytare_koket_energy_3:
+  hidden: true
+sensor.dubbelbrytare_koket_alarm_type:
+  hidden: true
+sensor.dubbelbrytare_koket_alarm_level:
+  hidden: true
+sensor.everspring_an179_in_wall_onoff_module_alarm_level:
+  hidden: true
+sensor.everspring_an179_in_wall_onoff_module_alarm_type:
+  hidden: true
+sensor.everspring_an179_in_wall_onoff_module_power_management:
+  hidden: true
+sensor.everspring_an179_in_wall_onoff_module_sourcenodeid:
+  hidden: true
+sensor.fibaro_system_fgrgbwm441_rgbw_controller_energy:
+  hidden: true
+sensor.fibaro_system_fgrgbwm441_rgbw_controller_exporting:
+  hidden: true
+
+sensor.sunis:
+  icon: mdi:white-balance-sunny
+
+sensor.solar_angle:
+  icon: mdi:theme-light-dark
+
+sensor.yr_symbol:
+  friendly_name: Yr-väder
+
+switch.entrebrytare_switch: 
+  friendly_name: Entrélampa
+  icon: mdi:lightbulb
+
+sensor.entrebrytare_power:
+  friendly_name: Effekt Entrélampa
+
+switch.aeotec_bordslampa_switch:
+  friendly_name: Bordslampa
+  icon: mdi:lightbulb
+switch.golvlampa_hall_uppe_switch:
+  friendly_name: Golvlampa
+  icon: mdi:lightbulb
+switch.hoger_lampa_mormors_rum_switch:
+  friendly_name: Höger vägglampa
+  icon: mdi:lightbulb
+switch.nattduksbordslampa_jonas_rum_switch:
+  friendly_name: Nattduksbordslampa
+  icon: mdi:lightbulb
+
+sensor.golvlampa_hall_uppe_power:
+  friendly_name: Effekt Golvlampa
+sensor.aeotec_bordslampa_power:
+  friendly_name: Effekt Bordslampa
+
+switch.vardagsrum_fonster_switch:
+  friendly_name: Fönsterlampa
+  icon: mdi:lightbulb
+switch.vardagsrum_jordglob_switch:
+  friendly_name: Jordglob
+  icon: mdi:web
+
+sensor.utomhus_temperature:
+  friendly_name: Temperatur utomhus
+  icon: mdi:thermometer
+sensor.jonas_rum_temperature:
+  friendly_name: Temperatur i Jonas rum
+  icon: mdi:thermometer
+sensor.kok_temperature:
+  friendly_name: Temperatur i köket
+  icon: mdi:thermometer
+sensor.badrumssensor_temperature:
+  friendly_name: Temperatur i badrummet
+  icon: mdi:thermometer
+sensor.badrumssensor_relative_humidity:
+  friendly_name: Luftfuktighet i badrummet
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+sensor.fibaro_eye_hallen_uppe_luminance:
+  friendly_name: Ljusstyrka garaget
+  icon: mdi:lightbulb-on-outline
+  unit_of_measurement: "lux"
+sensor.fibaro_eye_hallen_uppe_temperature:
+  friendly_name: Temperatur garaget
+  icon: mdi:thermometer
