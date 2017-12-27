@@ -1,0 +1,36 @@
+sensor.dubbelbrytare_koket_power_2:
+  hidden: true
+sensor.dubbelbrytare_koket_power_management:
+  hidden: true
+sensor.dubbelbrytare_koket_sourcenodeid:
+  hidden: true
+sensor.dubbelbrytare_koket_heat:
+  hidden: true
+sensor.dubbelbrytare_koket_exporting:
+  hidden: true
+sensor.dubbelbrytare_koket_exporting_2:
+  hidden: true
+sensor.dubbelbrytare_koket_exporting_3:
+  hidden: true
+sensor.dubbelbrytare_koket_energy:
+  hidden: true
+sensor.dubbelbrytare_koket_energy_2:
+  hidden: true
+sensor.dubbelbrytare_koket_energy_3:
+  hidden: true
+sensor.dubbelbrytare_koket_alarm_type:
+  hidden: true
+sensor.dubbelbrytare_koket_alarm_level:
+  hidden: true
+sensor.everspring_an179_in_wall_onoff_module_alarm_level:
+  hidden: true
+sensor.everspring_an179_in_wall_onoff_module_alarm_type:
+  hidden: true
+sensor.everspring_an179_in_wall_onoff_module_power_management:
+  hidden: true
+sensor.everspring_an179_in_wall_onoff_module_sourcenodeid:
+  hidden: true
+sensor.fibaro_system_fgrgbwm441_rgbw_controller_energy:
+  hidden: true
+sensor.fibaro_system_fgrgbwm441_rgbw_controller_exporting:
+  hidden: true

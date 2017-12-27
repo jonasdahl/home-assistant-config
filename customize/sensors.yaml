@@ -1,0 +1,23 @@
+sensor.utomhus_temperature:
+  friendly_name: Temperatur utomhus
+  icon: mdi:thermometer
+sensor.jonas_rum_temperature:
+  friendly_name: Temperatur i Jonas rum
+  icon: mdi:thermometer
+sensor.kok_temperature:
+  friendly_name: Temperatur i köket
+  icon: mdi:thermometer
+sensor.badrumssensor_temperature:
+  friendly_name: Temperatur i badrummet
+  icon: mdi:thermometer
+sensor.badrumssensor_relative_humidity:
+  friendly_name: Luftfuktighet i badrummet
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
+sensor.fibaro_eye_hallen_uppe_luminance:
+  friendly_name: Ljusstyrka garaget
+  icon: mdi:lightbulb-on-outline
+  unit_of_measurement: "lux"
+sensor.fibaro_eye_hallen_uppe_temperature:
+  friendly_name: Temperatur garaget
+  icon: mdi:thermometer

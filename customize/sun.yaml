@@ -1,0 +1,6 @@
+
+sensor.sunis:
+  icon: mdi:white-balance-sunny
+
+sensor.solar_angle:
+  icon: mdi:theme-light-dark

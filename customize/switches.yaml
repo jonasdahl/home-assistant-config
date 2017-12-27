@@ -1,0 +1,68 @@
+switch.pannrummet_switch:
+  friendly_name: Taklampa Pannrummet
+switch.pannrummet_switch_3:
+  friendly_name: Utomhusbelysning Pannrummet
+
+switch.utomhusswitch_1:
+  friendly_name: Utomhusbelysning
+switch.utomhusswitch_2:
+  hidden: true
+  friendly_name: Utomhusswitch 2
+
+switch.dubbelbrytare_koket_switch:
+  friendly_name: Taklampa Köket
+  icon: mdi:lightbulb
+switch.dubbelbrytare_koket_switch_2:
+  hidden: true
+switch.dubbelbrytare_koket_switch_3:
+  friendly_name: Matbordslampa Köket
+  icon: mdi:lightbulb
+light.lampa_vardagsstuga_matbord_level:
+  friendly_name: "Matbordslampa"
+switch.bryggarhuset_lysror_switch:
+  friendly_name: Lysrör Bryggarhuset och utanför
+
+sensor.lampa_vardagsstuga_matbord_power:
+  friendly_name: "Matbordslampa, effekt"
+
+sensor.dubbelbrytare_koket_power:
+  friendly_name: Taklampa köket, effekt
+sensor.dubbelbrytare_koket_power_3:
+  friendly_name: Matbordslampa köket, effekt
+sensor.fibaro_system_fgrgbwm441_rgbw_controller_power:
+  hidden: true
+sensor.fibaro_system_fgrgbwm441_rgbw_controller_power_2:
+  friendly_name: Vattenutkastare, effekt
+
+
+switch.entrebrytare_switch: 
+  friendly_name: Entrélampa
+  icon: mdi:lightbulb
+
+sensor.entrebrytare_power:
+  friendly_name: Effekt Entrélampa
+
+switch.aeotec_bordslampa_switch:
+  friendly_name: Bordslampa
+  icon: mdi:lightbulb
+switch.golvlampa_hall_uppe_switch:
+  friendly_name: Golvlampa
+  icon: mdi:lightbulb
+switch.hoger_lampa_mormors_rum_switch:
+  friendly_name: Höger vägglampa
+  icon: mdi:lightbulb
+switch.nattduksbordslampa_jonas_rum_switch:
+  friendly_name: Nattduksbordslampa
+  icon: mdi:lightbulb
+
+sensor.golvlampa_hall_uppe_power:
+  friendly_name: Effekt Golvlampa
+sensor.aeotec_bordslampa_power:
+  friendly_name: Effekt Bordslampa
+
+switch.vardagsrum_fonster_switch:
+  friendly_name: Fönsterlampa
+  icon: mdi:lightbulb
+switch.vardagsrum_jordglob_switch:
+  friendly_name: Jordglob
+  icon: mdi:web
