@@ -6,6 +6,8 @@ custom_components/
 deps
 *.log
 *.db
+*.db-shm
+*.db-wal
 *.sqlite
 known_devices.yaml
 tts
