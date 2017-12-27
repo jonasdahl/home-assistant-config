@@ -10,3 +10,4 @@ deps
 known_devices.yaml
 tts
 html5_push_registrations.conf
+secrets.yaml
