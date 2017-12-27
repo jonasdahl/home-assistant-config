@@ -1,0 +1,34 @@
+- platform: template
+  sensors:
+    solar_angle:
+      value_template: '{{ states.sun.sun.attributes.elevation }}'
+      friendly_name: 'Solvinkel'
+      unit_of_measurement: 'grader'
+    sunis:
+      friendly_name: Solen är...
+      value_template: '{% if is_state("sun.sun", "above_horizon") %}uppe{% else %}nere{% endif %}.'
+    motion_garage:
+      friendly_name: 'Rörelse garaget'
+      value_template: >-
+        {%- if is_state("sensor.fibaro_eye_hallen_uppe_burglar", "0") %}
+          nej
+        {%  elif is_state("sensor.fibaro_eye_hallen_uppe_burglar", "3") %}
+          jordbävning
+        {%  elif is_state("sensor.fibaro_eye_hallen_uppe_burglar", "8") %}
+          ja
+        {%  else %}
+          {{ states.sensor.fibaro_eye_hallen_uppe_burglar.state }}
+        {%- endif %}
+- platform: tellstick
+  65: Kök
+  203: Jonas rum
+  221: Utomhus
+  135: Växis
+  only_named: True
+  temperature_scale: "°C"
+  datatype_mask: 1
+- platform: tellstick
+  135: Växis
+  only_named: True
+  temperature_scale: "%"
+  datatype_mask: 2
