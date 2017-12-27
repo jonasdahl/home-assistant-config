@@ -1,4 +1,4 @@
-- alias: Tända vid solnedgång
+- alias: sunset_turn_on_outside
   trigger:
     platform: sun
     event: sunset
@@ -10,7 +10,7 @@
     service: homeassistant.turn_on
     entity_id: switch.utomhusswitch_1
 
-- alias: Släcka på natten
+- alias: night_turn_off_outside
   trigger: 
     platform: time
     at: "23:00:00"
@@ -18,7 +18,7 @@
     service: homeassistant.turn_off
     entity_id: switch.utomhusswitch_1
 
-- alias: Tänd i vardagsstuga vid rörelse
+- alias: motion_turn_on_vardagsstuga
   trigger:
     platform: state
     entity_id: binary_sensor.rorelse_vardagsstuga_sensor
@@ -28,19 +28,19 @@
     service: homeassistant.turn_on
     entity_id: light.lampa_vardagsstuga_matbord_level
 
-- alias: Släck i vardagsstuga efter 1 min utan rörelse
+- alias: motion_turn_off_vardagsstuga
   trigger:
     platform: state
     entity_id: binary_sensor.rorelse_vardagsstuga_sensor
     from: 'on'
     to: 'off'
     for:
-      minutes: 1
+      minutes: 30
   action:
     service: homeassistant.turn_off
     entity_id: light.lampa_vardagsstuga_matbord_level
 
-- alias: Tänd i köket vid rörelse
+- alias: motion_turn_on_kitchen
   trigger:
     platform: state
     entity_id: binary_sensor.rorelse_koket_sensor
@@ -50,7 +50,7 @@
     service: homeassistant.turn_on
     entity_id: switch.dubbelbrytare_koket_switch_3
 
-- alias: Tänd i pannrummet vid rörelse
+- alias: motion_turn_on_pannrum
   trigger:
     platform: state
     entity_id: binary_sensor.rorelse_pannrummet_sensor
@@ -60,19 +60,19 @@
     service: homeassistant.turn_on
     entity_id: switch.pannrummet_switch
 
-- alias: Släck i pannrummet efter 1 min utan rörelse
+- alias: motion_turn_off_pannrum
   trigger:
     platform: state
     entity_id: binary_sensor.rorelse_pannrummet_sensor
     from: 'on'
     to: 'off'
     for:
-      minutes: 1
+      seconds: 30
   action:
     service: homeassistant.turn_off
     entity_id: switch.pannrummet_switch
 
-- alias: Tänd pannrummets utomhuslampa vid öppning
+- alias: open_turn_on_pannrum_outside
   trigger:
     platform: state
     entity_id: binary_sensor.dorr_pannrummet_sensor
@@ -82,7 +82,7 @@
     service: homeassistant.turn_on
     entity_id: switch.pannrummet_switch_3
 
-- alias: Släck pannrummets utomhuslampa vid stängning
+- alias: close_turn_off_pannrum_outside
   trigger:
     platform: state
     entity_id: binary_sensor.dorr_pannrummet_sensor
@@ -92,4 +92,36 @@
     service: homeassistant.turn_off
     entity_id: switch.pannrummet_switch_3
 
+- alias: motion_turn_on_garage
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.rorelse_garaget_sensor
+      from: 'off'
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.dorr_garaget_sensor
+      from: 'off'
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.dorr_bryggarhuset_sensor
+      from: 'off'
+      to: 'on'
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.bryggarhuset_lysror_switch
+
+- alias: motion_turn_off_garage
+  trigger:
+    platform: state
+    entity_id: binary_sensor.rorelse_garaget_sensor
+    to: 'off'
+    for:
+      minutes: 1
+  condition:
+    condition: state
+    entity_id: binary_sensor.dorr_garaget_sensor
+    state: 'off'
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.bryggarhuset_lysror_switch
 

@@ -1,0 +1,69 @@
+weather: 
+  name: "Väder"
+  view: yes
+  entities:
+    - group.outside_weather
+    - group.greenhouse_weather
+    - group.hallway_weather
+    - group.bathroom_weather
+    - group.jonas_weather
+    - group.kitchen_weather
+
+outside_weather:
+  name: "Utomhus"
+  view: no
+  entities: 
+    - sensor.netatmo_outside_temperature
+    - sensor.utomhus_temperature
+    - sensor.netatmo_rain_rain
+    - sensor.netatmo_wind_strength
+    - sensor.netatmo_wind_angle
+    - sensor.netatmo_wind_gust_angle
+    - sensor.netatmo_wind_gust_strength
+    - sensor.netatmo_outside_humidity
+    - sensor.solar_angle
+    - sensor.sunis
+
+greenhouse_weather:
+  name: "Växthuset"
+  view: no
+  entities: 
+    - sensor.vaxis_temperature
+    - sensor.vaxis_temperature_2
+    - sensor.vaxis_humidity
+    
+hallway_weather:
+  name: "Hallen"
+  view: no
+  entities: 
+    - sensor.netatmo_indoor_temperature
+    - sensor.netatmo_indoor_humidity
+    - sensor.netatmo_indoor_co2
+    - sensor.netatmo_indoor_noise
+    - sensor.netatmo_indoor_pressure
+
+bathroom_weather:
+  name: "Badrummet"
+  view: no
+  entities: 
+    - sensor.badrumssensor_temperature
+    - sensor.badrumssensor_relative_humidity
+
+kitchen_weather:
+  name: "Köket"
+  view: no
+  entities:
+    - sensor.kok_temperature
+    - sensor.kok_temperature_2
+
+jonas_weather:
+  name: "Jonas rum"
+  view: no
+  entities:
+    - sensor.jonas_rum_temperature
+
+garage_weather:
+  name: "Garaget"
+  view: no
+  entities: 
+    - sensor.rorelse_garaget_temperature

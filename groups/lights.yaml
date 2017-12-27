@@ -1,0 +1,68 @@
+default_view: 
+  name: "Belysning"
+  view: yes
+  entities:
+    - group.outside_lights
+    - group.livingroom_lights
+    - group.upper_hall_lights
+    - group.jonas_lights
+    - group.pannrummet_lights
+    - group.kitchen_lights
+    - group.garage_lights
+    - group.grandmothers_lights
+
+outside_lights: 
+  name: "Utomhus"
+  view: no
+  entities:
+    - switch.entrebrytare_switch
+    - switch.utomhusswitch_1
+    - switch.utomhusswitch_2
+
+livingroom_lights: 
+  name: "Vardagsrummet"
+  view: no
+  entities:
+    - light.lampa_vardagsstuga_matbord_level
+    - switch.vardagsrum_fonster_switch
+    - switch.vardagsrum_jordglob_switch
+
+upper_hall_lights: 
+  name: "Övre hallen"
+  view: no
+  entities:
+    - switch.aeotec_bordslampa_switch
+    - switch.golvlampa_hall_uppe_switch
+
+jonas_lights: 
+  name: "Jonas rum"
+  view: no
+  entities:
+    - switch.nattduksbordslampa_jonas_rum_switch
+
+pannrummet_lights: 
+  name: "Pannrummet"
+  view: no
+  entities:
+    - switch.pannrummet_switch
+    - switch.pannrummet_switch_3
+
+grandmothers_lights: 
+  name: "Mormors rum"
+  view: no
+  entities:
+    - switch.hoger_lampa_mormors_rum_switch
+
+garage_lights:
+  name: "Garaget"
+  view: no
+  entities:
+    - switch.bryggarhuset_lysror_switch
+
+kitchen_lights:
+  name: "Köket"
+  view: no
+  entities:
+    - switch.dubbelbrytare_koket_switch
+    - switch.dubbelbrytare_koket_switch_3
+

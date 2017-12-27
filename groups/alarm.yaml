@@ -1,0 +1,46 @@
+alarm: 
+  name: "Övervakning"
+  view: yes
+  entities:
+    - group.shell
+    - group.motion
+    - group.power
+
+shell:
+  name: "Skal"
+  view: no
+  entities: 
+    - binary_sensor.dorr_bryggarhuset_sensor
+    - binary_sensor.dorr_pannrummet_sensor
+    - binary_sensor.dorr_garaget_sensor
+    - binary_sensor.ytterdorr_framsida_sensor
+
+motion:
+  name: "Rörelse"
+  view: no
+  entities: 
+    - binary_sensor.rorelse_koket_sensor
+    - binary_sensor.rorelse_pannrummet_sensor
+    - binary_sensor.rorelse_vardagsstuga_sensor
+    - binary_sensor.rorelse_garaget_sensor
+
+power:
+  name: "Strömförbrukning"
+  view: no
+  entities: 
+    - sensor.bryggarhuset_lysror_power
+    - sensor.bryggarhuset_lysror_power_2
+    - sensor.bryggarhuset_lysror_power_3
+    - sensor.aeotec_bordslampa_power
+    - sensor.entrebrytare_power
+    - sensor.entrebrytare_power_2
+    - sensor.entrebrytare_power_3
+    - sensor.golvlampa_hall_uppe_power
+    - sensor.lampa_vardagsstuga_matbord_power
+    - sensor.lampa_vardagsstuga_matbord_power_2
+    - sensor.dubbelbrytare_koket_power
+    - sensor.dubbelbrytare_koket_power_3
+    - sensor.pannrummet_power
+    - sensor.pannrummet_power_2
+    - sensor.pannrummet_power_3
+

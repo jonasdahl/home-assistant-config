@@ -63,7 +63,7 @@ sun:
 tts:
   platform: google
 
-group: !include groups.yaml
+group: !include_dir_merge_named groups/
 automation: !include automations.yaml
 
 # Tellstick

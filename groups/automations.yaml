@@ -1,0 +1,35 @@
+automations:
+  view: yes
+  name: "Automationer"
+  entities:
+    - group.motion_automations
+    - group.time_automations
+    - group.door_automations
+
+motion_automations:
+  view: no
+  name: "Rörelse"
+  entities:
+    - automation.motion_turn_on_garage
+    - automation.motion_turn_off_garage
+    - automation.motion_turn_on_vardagsstuga
+    - automation.motion_turn_off_vardagsstuga
+    - automation.motion_turn_on_kitchen
+    - automation.motion_turn_on_pannrum
+    - automation.motion_turn_off_pannrum
+
+door_automations:
+  view: no
+  name: "Dörrhändelser"
+  entities:
+    - automation.open_turn_on_pannrum_outside
+    - automation.close_turn_off_pannrum_outside
+
+time_automations:
+  view: no
+  name: "Tidsstyrningar"
+  entities:
+    - automation.sunset_turn_on_outside
+    - automation.night_turn_off_outside
+
+

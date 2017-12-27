@@ -1,0 +1,11 @@
+climate: 
+  name: "Termostat"
+  view: yes
+  entities:
+    - group.upper_floor_thermostate
+
+upper_floor_thermostate: 
+  name: "Övervåningen"
+  view: no
+  entities:
+    - climate.termostat_marie_thomas_rum_heating_1

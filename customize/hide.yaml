@@ -34,3 +34,212 @@ sensor.fibaro_system_fgrgbwm441_rgbw_controller_energy:
   hidden: true
 sensor.fibaro_system_fgrgbwm441_rgbw_controller_exporting:
   hidden: true
+
+sensor.dorr_garaget_sourcenodeid:
+  hidden: true
+sensor.dorr_pannrummet_access_control:
+  hidden: true
+sensor.dorr_pannrummet_alarm_level:
+  hidden: true
+sensor.dorr_pannrummet_alarm_type:
+  hidden: true
+sensor.dorr_pannrummet_sourcenodeid:
+  hidden: true
+sensor.entrebrytare_alarm_level:
+  hidden: true
+sensor.entrebrytare_alarm_type:
+  hidden: true
+sensor.entrebrytare_exporting:
+  hidden: true
+sensor.entrebrytare_exporting_2:
+  hidden: true
+sensor.entrebrytare_exporting_3:
+  hidden: true
+sensor.entrebrytare_heat:
+  hidden: true
+sensor.entrebrytare_power_management:
+  hidden: true
+sensor.entrebrytare_sourcenodeid:
+  hidden: true
+
+sensor.aeotec_bordslampa_current:
+  hidden: true
+sensor.aeotec_bordslampa_energy:
+  hidden: true
+sensor.aeotec_bordslampa_previous_reading:
+  hidden: true
+sensor.aeotec_bordslampa_voltage:
+  hidden: true
+
+sensor.badrumssensor_alarm_level:
+  hidden: true
+sensor.badrumssensor_alarm_type:
+  hidden: true
+sensor.badrumssensor_burglar:
+  hidden: true
+sensor.badrumssensor_sourcenodeid:
+  hidden: true
+sensor.bryggarhuset_lysror_alarm_level:
+  hidden: true
+sensor.bryggarhuset_lysror_alarm_type:
+  hidden: true
+sensor.bryggarhuset_lysror_energy:
+  hidden: true
+sensor.bryggarhuset_lysror_energy_2:
+  hidden: true
+sensor.bryggarhuset_lysror_energy_3:
+  hidden: true
+sensor.bryggarhuset_lysror_exporting:
+  hidden: true
+sensor.bryggarhuset_lysror_exporting_2:
+  hidden: true
+sensor.bryggarhuset_lysror_exporting_3:
+  hidden: true
+sensor.bryggarhuset_lysror_heat:
+  hidden: true
+sensor.bryggarhuset_lysror_power_management:
+  hidden: true
+sensor.bryggarhuset_lysror_sourcenodeid:
+  hidden: true
+sensor.dorr_bryggarhuset_access_control:
+  hidden: true
+sensor.dorr_bryggarhuset_alarm_level:
+  hidden: true
+sensor.dorr_bryggarhuset_alarm_type:
+  hidden: true
+sensor.dorr_bryggarhuset_sourcenodeid:
+  hidden: true
+sensor.dorr_garaget_access_control:
+  hidden: true
+sensor.dorr_garaget_alarm_level:
+  hidden: true
+sensor.entrebrytare_energy:
+  hidden: true
+sensor.entrebrytare_energy_3:
+  hidden: true
+sensor.entrebrytare_energy_2:
+  hidden: true
+sensor.golvlampa_hall_uppe_current:
+  hidden: true
+sensor.golvlampa_hall_uppe_energy:
+  hidden: true
+sensor.golvlampa_hall_uppe_previous_reading:
+  hidden: true
+sensor.golvlampa_hall_uppe_voltage:
+  hidden: true
+sensor.lampa_vardagsstuga_matbord_alarm_level:
+  hidden: true
+sensor.lampa_vardagsstuga_matbord_alarm_type:
+  hidden: true
+sensor.lampa_vardagsstuga_matbord_energy:
+  hidden: true
+sensor.lampa_vardagsstuga_matbord_exporting:
+  hidden: true
+sensor.lampa_vardagsstuga_matbord_heat:
+  hidden: true
+sensor.lysror_bryggarhuset_alarm_level:
+  hidden: true
+sensor.lysror_bryggarhuset_alarm_type:
+  hidden: true
+sensor.lysror_bryggarhuset_power_management:
+  hidden: true
+sensor.lysror_bryggarhuset_sourcenodeid:
+  hidden: true
+sensor.pannrummet_alarm_level:
+  hidden: true
+sensor.pannrummet_energy:
+  hidden: true
+sensor.pannrummet_energy_2:
+  hidden: true
+sensor.pannrummet_energy_3:
+  hidden: true
+sensor.pannrummet_exporting:
+  hidden: true
+sensor.pannrummet_exporting_3:
+  hidden: true
+sensor.pannrummet_exporting_2:
+  hidden: true
+sensor.pannrummet_heat:
+  hidden: true
+sensor.pannrummet_power_management:
+  hidden: true
+sensor.pannrummet_sourcenodeid:
+  hidden: true
+sensor.rorelse_garaget_alarm_level:
+  hidden: true
+sensor.rorelse_garaget_alarm_type:
+  hidden: true
+sensor.rorelse_garaget_burglar: # TODO
+  hidden: true
+sensor.rorelse_garaget_dew_point:
+  hidden: true
+sensor.rorelse_garaget_general:
+  hidden: true
+sensor.rorelse_garaget_general_2:
+  hidden: true
+sensor.rorelse_garaget_luminance:
+  hidden: true
+sensor.rorelse_garaget_seismic_intensity:
+  hidden: true
+sensor.rorelse_garaget_sourcenodeid:
+  hidden: true
+sensor.rorelse_garaget_tank_capacity:
+  hidden: true
+sensor.rorelse_koket_alarm_level:
+  hidden: true
+sensor.rorelse_koket_alarm_type:
+  hidden: true
+
+sensor.rorelse_koket_sourcenodeid:
+  hidden: true
+sensor.rorelse_pannrummet_alarm_level:
+  hidden: true
+sensor.rorelse_pannrummet_alarm_type:
+  hidden: true
+sensor.rorelse_pannrummet_burglar:
+  hidden: true
+sensor.rorelse_pannrummet_sourcenodeid:
+  hidden: true
+sensor.rorelse_vardagsstuga_alarm_level:
+  hidden: true
+sensor.rorelse_vardagsstuga_alarm_type:
+  hidden: true
+sensor.rorelse_vardagsstuga_burglar:
+  hidden: true
+sensor.rorelse_vardagsstuga_sourcenodeid:
+  hidden: true
+
+sensor.ytterdorr_framsida_access_control:
+  hidden: true
+sensor.ytterdorr_framsida_alarm_level:
+  hidden: true
+sensor.ytterdorr_framsida_alarm_type:
+  hidden: true
+sensor.ytterdorr_framsida_sourcenodeid:
+  hidden: true
+
+sensor.rorelse_koket_burglar:
+  hidden: true
+sensor.dorr_garaget_alarm_type:
+  hidden: true
+sensor.lampa_vardagsstuga_matbord_power:
+  hidden: true
+sensor.lampa_vardagsstuga_matbord_power_management:
+  hidden: true
+sensor.lampa_vardagsstuga_matbord_sourcenodeid:
+  hidden: true
+sensor.lampa_vardagsstuga_matbord_system:
+  hidden: true
+sensor.pannrummet_alarm_type:
+  hidden: true
+
+sensor.rorelse_vardagsstuga_luminance:
+  hidden: true
+sensor.rorelse_pannrummet_luminance:
+  hidden: true
+sensor.rorelse_koket_luminance:
+  hidden: true
+binary_sensor.badrumssensor_sensor:
+  hidden: true
+sun.sun:
+  hidden: true

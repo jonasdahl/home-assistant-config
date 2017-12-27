@@ -1,3 +1,44 @@
+group.weather:
+  order: 2
+group.climate:
+  order: 3
+group.alarm:
+  order: 4
+group.automations:
+  order: 5
+group.status:
+  order: 6
+
+automation.motion_turn_on_vardagsstuga:
+  friendly_name: Tänd i vardagsstuga vid rörelse
+automation.motion_turn_off_vardagsstuga:
+  friendly_name: Släck i vardagsstuga efter 30 min utan rörelse
+
+automation.motion_turn_on_garage:
+  friendly_name: Tänd i garaget vid rörelse
+automation.motion_turn_off_garage:
+  friendly_name: Släck i garaget efter 1 min utan rörelse
+
+automation.motion_turn_on_kitchen:
+  friendly_name: Tänd i köket vid rörelse
+
+automation.motion_turn_on_pannrum:
+  friendly_name: Tänd i pannrummet vid rörelse
+
+automation.motion_turn_off_pannrum:
+  friendly_name: Släck i pannrummet efter 30 sek utan rörelse
+
+automation.open_turn_on_pannrum_outside:
+  friendly_name: Tänd pannrummets utomhuslampa vid öppning
+
+automation.close_turn_off_pannrum_outside:
+  friendly_name: Släck pannrummets utomhuslampa vid stängning
+
+automation.sunset_turn_on_outside:
+  friendly_name: Tänd utebelysning vid solnedgång
+automation.night_turn_off_outside:
+  friendly_name: "Släck utebelysning vid 23:00"
+
 sensor.utomhus_temperature:
   friendly_name: Temperatur utomhus
   icon: mdi:thermometer
@@ -21,3 +62,32 @@ sensor.fibaro_eye_hallen_uppe_luminance:
 sensor.fibaro_eye_hallen_uppe_temperature:
   friendly_name: Temperatur garaget
   icon: mdi:thermometer
+
+binary_sensor.dorr_bryggarhuset_sensor:
+  friendly_name: Dörr bryggarhuset
+  device_class: opening
+binary_sensor.dorr_pannrummet_sensor:
+  friendly_name: Dörr pannrummet
+  device_class: opening
+binary_sensor.dorr_garaget_sensor:
+  friendly_name: Dörr garaget
+  device_class: opening
+binary_sensor.ytterdorr_framsida_sensor:
+  friendly_name: Ytterdörr framsida
+  device_class: opening
+binary_sensor.rorelse_koket_sensor:
+  friendly_name: Rörelse köket
+  device_class: motion
+binary_sensor.rorelse_pannrummet_sensor:
+  friendly_name: Rörelse pannrummet
+  device_class: motion
+binary_sensor.rorelse_vardagsstuga_sensor:
+  friendly_name: Rörelse vardagsstuga
+  device_class: motion
+binary_sensor.rorelse_garaget_sensor:
+  friendly_name: Rörelse garaget
+  device_class: motion
+
+
+climate.termostat_marie_thomas_rum_heating_1:
+  friendly_name: Termostat Stora kammaren
