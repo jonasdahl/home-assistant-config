@@ -1,0 +1,15 @@
+# Settings for the history component
+include:
+  entities:
+    - sensor.solar_angle
+    - sensor.fibaro_eye_hallen_uppe_luminance
+    - sensor.temperature_out
+    - sensor.fibaro_eye_hallen_uppe_temperature
+    - sensor.temperature_kok
+    - sensor.temperature_jonas_rum
+    - sensor.temperature_utomhus
+    - sensor.vaxis_temperature
+    - sensor.vaxis_humidity
+    - sensor.badrumssensor_temperature
+    - sensor.humidity_hall
+    - sensor.badrumssensor_relative_humidity
