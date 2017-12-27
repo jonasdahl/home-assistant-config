@@ -1,0 +1,11 @@
+#influxdb: 
+host: 127.0.0.1
+username: !secret influx_username
+password: !secret influx_password
+include: 
+  entities:
+    - sensor.temperature_utomhus
+    - sensor.vaxis_temperature
+    - sensor.vaxis_humidity
+    - sensor.utomhus_temperature
+    - sensor.temperature_out
