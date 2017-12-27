@@ -1,0 +1,12 @@
+*.xml
+.HA_VERSION
+.uuid
+OZW_Log.txt
+custom_components/
+deps
+*.log
+*.db
+*.sqlite
+known_devices.yaml
+tts
+html5_push_registrations.conf
