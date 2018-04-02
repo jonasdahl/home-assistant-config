@@ -1,4 +1,5 @@
 - alias: sunset_turn_on_outside
+  initial_state: 'on'
   trigger:
     platform: sun
     event: sunset
@@ -7,18 +8,24 @@
     condition: time
     before: "23:00:00"
   action:
-    service: homeassistant.turn_on
-    entity_id: switch.utomhusswitch_1
+    - service: homeassistant.turn_on
+      entity_id: switch.utomhusswitch_1
+    - service: homeassistant.turn_on
+      entity_id: switch.utomhusswitch_2
 
 - alias: night_turn_off_outside
+  initial_state: 'on'
   trigger: 
     platform: time
     at: "23:00:00"
   action:
-    service: homeassistant.turn_off
-    entity_id: switch.utomhusswitch_1
+    - service: homeassistant.turn_off
+      entity_id: switch.utomhusswitch_1
+    - service: homeassistant.turn_off
+      entity_id: switch.utomhusswitch_2
 
 - alias: motion_turn_on_vardagsstuga
+  initial_state: 'off'
   trigger:
     platform: state
     entity_id: binary_sensor.rorelse_vardagsstuga_sensor
@@ -29,6 +36,7 @@
     entity_id: light.lampa_vardagsstuga_matbord_level
 
 - alias: motion_turn_off_vardagsstuga
+  initial_state: 'off'
   trigger:
     platform: state
     entity_id: binary_sensor.rorelse_vardagsstuga_sensor
@@ -41,6 +49,7 @@
     entity_id: light.lampa_vardagsstuga_matbord_level
 
 - alias: motion_turn_on_kitchen
+  initial_state: 'off'
   trigger:
     platform: state
     entity_id: binary_sensor.rorelse_koket_sensor
@@ -51,6 +60,7 @@
     entity_id: switch.dubbelbrytare_koket_switch_3
 
 - alias: motion_turn_on_pannrum
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.rorelse_pannrummet_sensor
@@ -61,6 +71,7 @@
     entity_id: switch.pannrummet_switch
 
 - alias: motion_turn_off_pannrum
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.rorelse_pannrummet_sensor
@@ -72,7 +83,32 @@
     service: homeassistant.turn_off
     entity_id: switch.pannrummet_switch
 
+- alias: motion_turn_on_badrumslampor
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.rorelse_badrum_sensor
+    from: 'off'
+    to: 'on'
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.badrumslampor_switch
+
+- alias: motion_turn_off_badrumslampor
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.rorelse_badrum_sensor
+    from: 'on'
+    to: 'off'
+    for:
+      minutes: 15
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.badrumslampor_switch
+
 - alias: open_turn_on_pannrum_outside
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.dorr_pannrummet_sensor
@@ -83,23 +119,23 @@
     entity_id: switch.pannrummet_switch_3
 
 - alias: close_turn_off_pannrum_outside
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.dorr_pannrummet_sensor
     from: 'on'
     to: 'off'
+    for: 
+      minutes: 10
   action:
     service: homeassistant.turn_off
     entity_id: switch.pannrummet_switch_3
 
 - alias: motion_turn_on_garage
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: binary_sensor.rorelse_garaget_sensor
-      from: 'off'
-      to: 'on'
-    - platform: state
-      entity_id: binary_sensor.dorr_garaget_sensor
       from: 'off'
       to: 'on'
     - platform: state
@@ -111,17 +147,94 @@
     entity_id: switch.bryggarhuset_lysror_switch
 
 - alias: motion_turn_off_garage
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.rorelse_garaget_sensor
+    from: 'on'
     to: 'off'
     for:
       minutes: 1
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.bryggarhuset_lysror_switch
+
+- alias: motion_turn_off_garage_2
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: switch.bryggarhuset_lysror_switch
+    to: 'on'
+    for:
+      minutes: 10
   condition:
     condition: state
-    entity_id: binary_sensor.dorr_garaget_sensor
+    entity_id: binary_sensor.rorelse_garaget_sensor
     state: 'off'
   action:
     service: homeassistant.turn_off
     entity_id: switch.bryggarhuset_lysror_switch
 
+- alias: low_temperature
+  initial_state: 'off'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.jonas_rum_temperature
+      below: 10
+    - platform: numeric_state
+      entity_id: sensor.netatmo_outside_temperature
+      below: 2
+    - platform: numeric_state
+      entity_id: sensor.rorelse_garaget_temperature
+      below: 4
+    - platform: numeric_state
+      entity_id: sensor.utomhus_temperature
+      below: 2
+    - platform: numeric_state
+      entity_id: sensor.vaxis_temperature
+      below: 3
+  action:
+    - service: notify.html5
+      data_template:
+        message: "Låg temperatur på Fårö, titta till appen."
+
+- alias: fan_turn_on_temperature
+  initial_state: 'off'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.jonas_rum_temperature
+    below: 4
+  action:
+    - service: homeassistant.turn_on
+      entity_id: switch.garage_varmeflakt_switch
+    - service: notify.html5
+      data_template:
+        message: "Värmefläkten startade {{ states('sensor.time') }} då det är {{ states('sensor.jonas_rum_temperature') }} grader i garageväxis."
+
+- alias: fan_turn_off_temperature
+  initial_state: 'off'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.jonas_rum_temperature
+    above: 4.5
+  action:
+    - service: homeassistant.turn_off
+      entity_id: switch.garage_varmeflakt_switch
+    - service: notify.html5
+      data_template:
+        message: "Värmefläkten stängdes av {{ states('sensor.time') }} då det blev {{ states('sensor.jonas_rum_temperature') }} grader."
+
+- alias: fan_turn_off_time
+  initial_state: 'off'
+  trigger:
+    platform: state
+    entity_id: switch.garage_varmeflakt_switch
+    to: 'on'
+    for:
+      minutes: 20
+  action:
+    - service: homeassistant.turn_off
+      entity_id: switch.garage_varmeflakt_switch
+    - service: notify.html5
+      data_template:
+        message: "Värmefläkten stängdes av {{ states('sensor.time') }} då den kört i 20 minuter. Sluttemperaturen blev {{ states('sensor.jonas_rum_temperature') }} grader."
