@@ -20,3 +20,11 @@
   only_named: True
   temperature_scale: "%"
   datatype_mask: 2
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+    - 'date_time'
+    - 'time_date'
+    - 'time_utc'
+    - 'beat'
