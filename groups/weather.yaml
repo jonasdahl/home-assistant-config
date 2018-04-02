@@ -8,6 +8,15 @@ weather:
     - group.bathroom_weather
     - group.jonas_weather
     - group.kitchen_weather
+    - group.garage_weather
+
+garage_weather:
+  name: "Garaget"
+  view: no
+  entities:
+    - sensor.rorelse_garaget_luminance
+    - sensor.rorelse_garaget_temperature
+    - sensor.jonas_rum_temperature
 
 outside_weather:
   name: "Utomhus"
@@ -55,15 +64,3 @@ kitchen_weather:
   entities:
     - sensor.kok_temperature
     - sensor.kok_temperature_2
-
-jonas_weather:
-  name: "Jonas rum"
-  view: no
-  entities:
-    - sensor.jonas_rum_temperature
-
-garage_weather:
-  name: "Garaget"
-  view: no
-  entities: 
-    - sensor.rorelse_garaget_temperature

@@ -5,6 +5,7 @@ automations:
     - group.motion_automations
     - group.time_automations
     - group.door_automations
+    - group.fan_automations
 
 motion_automations:
   view: no
@@ -12,11 +13,14 @@ motion_automations:
   entities:
     - automation.motion_turn_on_garage
     - automation.motion_turn_off_garage
+    - automation.motion_turn_off_garage_2
     - automation.motion_turn_on_vardagsstuga
     - automation.motion_turn_off_vardagsstuga
     - automation.motion_turn_on_kitchen
     - automation.motion_turn_on_pannrum
     - automation.motion_turn_off_pannrum
+    - automation.motion_turn_on_badrumslampor
+    - automation.motion_turn_off_badrumslampor
 
 door_automations:
   view: no
@@ -31,5 +35,21 @@ time_automations:
   entities:
     - automation.sunset_turn_on_outside
     - automation.night_turn_off_outside
+
+fan_automations:
+  view: no
+  name: "Värmefläkt"
+  entities:
+    - automation.fan_turn_on_temperature
+    - automation.fan_turn_off_time
+    - automation.fan_turn_off_temperature
+    - switch.garage_varmeflakt_switch
+    - sensor.jonas_rum_temperature
+
+notification_automations:
+  view: no
+  name: "Notifikationer"
+  entities:
+    - automation.low_temperature
 
 

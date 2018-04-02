@@ -3,9 +3,19 @@ climate:
   view: yes
   entities:
     - group.upper_floor_thermostate
+    - group.lower_floor_thermostate
 
 upper_floor_thermostate: 
   name: "Övervåningen"
   view: no
   entities:
     - climate.termostat_marie_thomas_rum_heating_1
+    - climate.termostat_jonas_rum_heating_1
+    - climate.termostat_hall_uppe_heating_1
+    - climate.termostat_badrum_uppe_heating_1
+
+lower_floor_thermostate: 
+  name: "Undervåningen"
+  view: no
+  entities:
+    - climate.termostat_koket_heating_1

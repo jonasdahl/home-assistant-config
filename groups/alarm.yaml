@@ -22,7 +22,11 @@ motion:
     - binary_sensor.rorelse_koket_sensor
     - binary_sensor.rorelse_pannrummet_sensor
     - binary_sensor.rorelse_vardagsstuga_sensor
-    - binary_sensor.rorelse_garaget_sensor
+    - binary_sensor.rorelse_badrum_sensor
+    - binary_sensor.rorelse_hallen_sensor
+    - binary_sensor.rorelse_hallen_uppe_sensor
+    - binary_sensor.rorelse_jonas_rum_sensor
+    - binary_sensor.rorelse_garage
 
 power:
   name: "Strömförbrukning"
