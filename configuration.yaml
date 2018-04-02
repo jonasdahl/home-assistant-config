@@ -71,6 +71,24 @@ tellstick:
   signal_repetitions: 5
 
 sensor: !include sensors.yaml
+binary_sensor:
+  - platform: template
+    sensors:
+      rorelse_garage:
+        device_class: motion
+        friendly_name: "Rörelse garaget"
+        value_template: >-
+          {{ states('sensor.rorelse_garaget_burglar')|float > 0 }}
 
 zwave: !include zwave.yaml
+
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  client_id: !secret google_assistant_client_id
+  access_token: !secret google_assistant_access_token
+  agent_user_id: !secret google_assistant_user_id
+  api_key: !secret google_assistant_api_key
+  exposed_domains:
+    - switch
+    - light
 
