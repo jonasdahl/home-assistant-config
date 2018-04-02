@@ -4,10 +4,9 @@ switch.pannrummet_switch_3:
   friendly_name: Utomhusbelysning Pannrummet
 
 switch.utomhusswitch_1:
-  friendly_name: Utomhusbelysning
+  friendly_name: Fasadbelysning huset
 switch.utomhusswitch_2:
-  hidden: true
-  friendly_name: Utomhusswitch 2
+  friendly_name: Fasadbelysning växis/garage
 
 switch.dubbelbrytare_koket_switch:
   friendly_name: Taklampa Köket
@@ -33,6 +32,10 @@ sensor.fibaro_system_fgrgbwm441_rgbw_controller_power:
   hidden: true
 sensor.fibaro_system_fgrgbwm441_rgbw_controller_power_2:
   friendly_name: Vattenutkastare, effekt
+
+switch.badrumslampor_switch:
+  friendly_name: Taklampa badrummet
+  icon: mdi:lightbulb
 
 
 switch.entrebrytare_switch: 
@@ -63,6 +66,7 @@ sensor.aeotec_bordslampa_power:
 switch.vardagsrum_fonster_switch:
   friendly_name: Fönsterlampa
   icon: mdi:lightbulb
-switch.vardagsrum_jordglob_switch:
-  friendly_name: Jordglob
-  icon: mdi:web
+
+switch.garage_varmeflakt_switch:
+  friendly_name: Värmefläkt
+  icon: mdi:fan
