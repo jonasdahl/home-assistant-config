@@ -18,15 +18,21 @@ automation.motion_turn_on_garage:
   friendly_name: Tänd i garaget vid rörelse
 automation.motion_turn_off_garage:
   friendly_name: Släck i garaget efter 1 min utan rörelse
+automation.motion_turn_off_garage_2:
+  friendly_name: Släck i garaget 10 min efter att bryggarhusdörren stängts
 
 automation.motion_turn_on_kitchen:
   friendly_name: Tänd i köket vid rörelse
 
 automation.motion_turn_on_pannrum:
   friendly_name: Tänd i pannrummet vid rörelse
-
 automation.motion_turn_off_pannrum:
   friendly_name: Släck i pannrummet efter 30 sek utan rörelse
+
+automation.motion_turn_on_badrumslampor:
+  friendly_name: Tänd i badrummet vid rörelse
+automation.motion_turn_off_badrumslampor:
+  friendly_name: Släck i badrummet efter 2 min utan rörelse
 
 automation.open_turn_on_pannrum_outside:
   friendly_name: Tänd pannrummets utomhuslampa vid öppning
@@ -38,6 +44,15 @@ automation.sunset_turn_on_outside:
   friendly_name: Tänd utebelysning vid solnedgång
 automation.night_turn_off_outside:
   friendly_name: "Släck utebelysning vid 23:00"
+
+
+automation.fan_turn_on_temperature:
+  friendly_name: Fläkt - sätt på om kallare än 4 °C
+automation.fan_turn_off_temperature:
+  friendly_name: Fläkt - stäng av om varmare än 4.5 °C
+automation.fan_turn_off_time:
+  friendly_name: Fläkt - stäng av efter 20 min
+
 
 
 sensor.bryggarhuset_lysror_power:
@@ -54,7 +69,7 @@ sensor.utomhus_temperature:
   friendly_name: Temperatur utomhus
   icon: mdi:thermometer
 sensor.jonas_rum_temperature:
-  friendly_name: Temperatur i Jonas rum
+  friendly_name: Temperatur i garageväxis
   icon: mdi:thermometer
 sensor.kok_temperature:
   friendly_name: Temperatur i köket
@@ -98,7 +113,26 @@ binary_sensor.rorelse_vardagsstuga_sensor:
 binary_sensor.rorelse_garaget_sensor:
   friendly_name: Rörelse garaget
   device_class: motion
-
+binary_sensor.rorelse_badrum_sensor:
+  friendly_name: Rörelse badrummet nere
+  device_class: motion
+binary_sensor.rorelse_hallen_sensor:
+  friendly_name: Rörelse hallen nere
+  device_class: motion
+binary_sensor.rorelse_hallen_uppe_sensor:
+  friendly_name: Rörelse hallen uppe
+  device_class: motion
+binary_sensor.rorelse_jonas_rum_sensor:
+  friendly_name: Rörelse Jonas rum
+  device_class: motion
 
 climate.termostat_marie_thomas_rum_heating_1:
   friendly_name: Termostat Stora kammaren
+climate.termostat_jonas_rum_heating_1:
+  friendly_name: Termostat Jonas rum
+climate.termostat_koket_heating_1:
+  friendly_name: Termostat Köket
+climate.termostat_hall_uppe_heating_1:
+  friendly_name: Termostat Hallen uppe
+climate.termostat_badrum_uppe_heating_1:
+  friendly_name: Termostat Toaletten uppe
