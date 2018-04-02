@@ -1,17 +1,59 @@
 status:
- view: yes
- name: "Status"
- entities:
-   - group.status_netatmo
+  view: yes
+  name: "Status"
+  entities:
+    - group.status_netatmo
+    - group.status_thermostats
+    - group.status_doors
+    - group.status_motion
+    - group.status_other
 
 status_netatmo:
- view: no
- name: "Netatmo"
- entities:
-   - sensor.netatmo_rain_battery
-   - sensor.netatmo_outside_battery
-   - sensor.netatmo_wind_battery
-   - sensor.netatmo_rain_radio
-   - sensor.netatmo_outside_radio
-   - sensor.netatmo_wind_radio 
-   - sensor.netatmo_indoor_wifi
+  view: no
+  name: "Netatmo"
+  entities:
+    - sensor.netatmo_rain_battery
+    - sensor.netatmo_outside_battery
+    - sensor.netatmo_wind_battery
+    - sensor.netatmo_rain_radio
+    - sensor.netatmo_outside_radio
+    - sensor.netatmo_wind_radio 
+    - sensor.netatmo_indoor_wifi
+
+status_thermostats:
+  view: no
+  name: "Termostater"
+  entities:
+    - sensor.termostat_marie_thomas_rum_battery
+    - sensor.termostat_jonas_rum_battery
+    - sensor.termostat_badrum_uppe_battery
+    - sensor.termostat_hall_uppe_battery
+    - sensor.termostat_koket_battery
+
+status_doors:
+  view: no
+  name: "Dörrsensorer"
+  entities:
+    - sensor.dorr_bryggarhuset_battery
+    - sensor.dorr_garaget_battery
+    - sensor.dorr_pannrummet_battery
+
+status_motion:
+  view: no
+  name: "Rörelsedetektorer"
+  entities:
+    - sensor.rorelse_badrum_battery
+    - sensor.rorelse_garaget_battery
+    - sensor.rorelse_garaget_2_battery
+    - sensor.rorelse_hallen_battery
+    - sensor.rorelse_hallen_uppe_battery
+    - sensor.rorelse_jonas_rum_battery
+    - sensor.rorelse_koket_battery
+    - sensor.rorelse_pannrummet_battery
+    - sensor.rorelse_vardagsstuga_battery
+
+status_other:
+  view: no
+  name: "Övrigt"
+  entities:
+    - sensor.badrumssensor_battery

@@ -136,3 +136,64 @@ climate.termostat_hall_uppe_heating_1:
   friendly_name: Termostat Hallen uppe
 climate.termostat_badrum_uppe_heating_1:
   friendly_name: Termostat Toaletten uppe
+
+sensor.termostat_badrum_uppe_battery:
+  friendly_name: Termostat badrum uppe
+  icon: mdi:battery
+sensor.termostat_jonas_rum_battery:
+  friendly_name: Termostat Jonas rum
+  icon: mdi:battery
+sensor.termostat_marie_thomas_rum_battery:
+  friendly_name: Termostat Stora kammaren
+  icon: mdi:battery
+sensor.termostat_koket_battery:
+  friendly_name: Termostat köket
+  icon: mdi:battery
+sensor.termostat_hall_uppe_battery:
+  friendly_name: Termostat hallen uppe
+  icon: mdi:battery
+
+
+
+sensor.badrumssensor_battery:
+  friendly_name: Badrumssensor
+  icon: mdi:battery
+sensor.dorr_bryggarhuset_battery:
+  friendly_name: Dörr bryggarhuset
+  icon: mdi:battery
+sensor.dorr_garaget_battery:
+  friendly_name: Dörr garaget
+  icon: mdi:battery
+sensor.dorr_pannrummet_battery:
+  friendly_name: Dörr pannrummet
+  icon: mdi:battery
+sensor.pannrummet_battery:
+  friendly_name: Pannrummet
+  icon: mdi:battery
+sensor.rorelse_badrum_battery:
+  friendly_name: Rörelse badrum nere
+  icon: mdi:battery
+sensor.rorelse_garaget_2_battery:
+  friendly_name: Rörelse garaget 2
+  icon: mdi:battery
+sensor.rorelse_garaget_battery:
+  friendly_name: Rörelse garaget
+  icon: mdi:battery
+sensor.rorelse_hallen_battery:
+  friendly_name: Rörelse hallen
+  icon: mdi:battery
+sensor.rorelse_hallen_uppe_battery:
+  friendly_name: Rörelse hallen uppe
+  icon: mdi:battery
+sensor.rorelse_jonas_rum_battery:
+  friendly_name: Rörelse Jonas rum
+  icon: mdi:battery
+sensor.rorelse_koket_battery:
+  friendly_name: Rörelse köket
+  icon: mdi:battery
+sensor.rorelse_pannrummet_battery:
+  friendly_name: Rörelse pannrummet
+  icon: mdi:battery
+sensor.rorelse_vardagsstuga_battery:
+  friendly_name: Rörelse vardagsstuga
+  icon: mdi:battery

@@ -1,5 +1,6 @@
 default_view: 
-#lights:
+
+lights:
   name: "Belysning"
   view: yes
   entities:

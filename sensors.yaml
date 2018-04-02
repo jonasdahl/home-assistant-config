@@ -7,6 +7,68 @@
     sunis:
       friendly_name: Solen är...
       value_template: '{% if is_state("sun.sun", "above_horizon") %}uppe{% else %}nere{% endif %}.'
+    termostat_badrum_uppe_battery:
+      value_template: '{{ states.zwave.termostat_badrum_uppe.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    termostat_hall_uppe_battery:
+      value_template: '{{ states.zwave.termostat_hall_uppe.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    termostat_jonas_rum_battery:
+      value_template: '{{ states.zwave.termostat_jonas_rum.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    termostat_koket_battery:
+      value_template: '{{ states.zwave.termostat_koket.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    termostat_marie_thomas_rum_battery:
+      value_template: '{{ states.zwave.termostat_marie_thomas_rum.attributes.battery_level }}'
+      unit_of_measurement: '%'
+
+
+    badrumssensor_battery:
+      value_template: '{{ states.zwave.badrumssensor.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    dorr_bryggarhuset_battery:
+      value_template: '{{ states.zwave.dorr_bryggarhuset.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    dorr_garaget_battery:
+      value_template: '{{ states.zwave.dorr_garaget.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    dorr_pannrummet_battery:
+      value_template: '{{ states.zwave.dorr_pannrummet.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    pannrummet_battery:
+      value_template: '{{ states.zwave.pannrummet.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    rorelse_badrum_battery:
+      value_template: '{{ states.zwave.rorelse_badrum.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    rorelse_garaget_2_battery:
+      value_template: '{{ states.zwave.rorelse_garaget_2.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    rorelse_garaget_battery:
+      value_template: '{{ states.zwave.rorelse_garaget.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    rorelse_hallen_battery:
+      value_template: '{{ states.zwave.rorelse_hallen.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    rorelse_hallen_uppe_battery:
+      value_template: '{{ states.zwave.rorelse_hallen_uppe.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    rorelse_jonas_rum_battery:
+      value_template: '{{ states.zwave.rorelse_jonas_rum.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    rorelse_koket_battery:
+      value_template: '{{ states.zwave.rorelse_koket.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    rorelse_pannrummet_battery:
+      value_template: '{{ states.zwave.rorelse_pannrummet.attributes.battery_level }}'
+      unit_of_measurement: '%'
+    rorelse_vardagsstuga_battery:
+      value_template: '{{ states.zwave.rorelse_vardagsstuga.attributes.battery_level }}'
+      unit_of_measurement: '%'
+
+
+
 - platform: tellstick
   65: Kök
   203: Jonas rum
